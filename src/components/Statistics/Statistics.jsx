@@ -28,7 +28,7 @@ const Statistics = ({
           Total: <Decoration>{total}</Decoration>{' '}
         </Point>
         <Point>
-          Positive feedback: <Decoration>{positivePercentage}%</Decoration>
+          Positive feedback: <Decoration>{positivePercentage()}%</Decoration>
         </Point>
       </div>
     )}
@@ -40,6 +40,6 @@ Statistics.propTypes = {
   neutral: PropTypes.number.isRequired,
   bad: PropTypes.number.isRequired,
   total: PropTypes.number.isRequired,
-  positivePercentage: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.func.isRequired,
 };
 export default Statistics;
